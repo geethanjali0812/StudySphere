@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySphere - Notes</title>
+
+    <link rel="stylesheet" href="notes.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="notes-page">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+
+                <h2>🎓 StudySphere</h2>
+
+                <p>
+                    Smart Student Learning Portal
+                </p>
+
+            </div>
+
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="todo.html">
+
+                    <i class="fa-solid fa-square-check"></i>
+
+                    To-Do List
+
+                </a>
+
+
+                <a href="timer.html">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Study Timer
+
+                </a>
+
+
+                <a href="cgpa.html">
+
+                    <i class="fa-solid fa-calculator"></i>
+
+                    CGPA Calculator
+
+                </a>
+
+
+                <a href="notes.html" class="active">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    Notes
+
+                </a>
+
+
+                <a href="exam-planner.html">
+    <i class="fa-solid fa-calendar-days"></i>
+    Exam Planner
+</a>
+
+
+                <a href="profile.html">
+    <i class="fa-solid fa-user"></i>
+    Profile
+</a>
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+            <div class="sidebar-bottom">
+
+                <div class="dark-mode">
+
+                    <span>☀️ Dark Mode</span>
+
+                    <button id="darkModeBtn">
+                        🌙
+                    </button>
+
+                </div>
+
+
+                <p>
+                    © 2026 StudySphere
+                </p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="notes-content">
+
+
+            <!-- TOP HEADER -->
+            <div class="notes-header">
+
+                <div>
+
+                    <h1>
+                        📚 My Notes
+                    </h1>
+
+                    <p>
+                        Create, organize and manage your study notes.
+                    </p>
+
+                </div>
+
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchNotes"
+                        placeholder="Search notes..."
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD NOTE SECTION -->
+            <section class="add-note-card">
+
+                <h2>
+                    ✏️ Create New Note
+                </h2>
+
+
+                <div class="note-form">
+
+
+                    <!-- NOTE TITLE -->
+                    <div class="form-group">
+
+                        <label for="noteTitle">
+                            Note Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="noteTitle"
+                            placeholder="Enter note title..."
+                        >
+
+                    </div>
+
+<div class="form-group">
+
+    <label for="noteSubject">
+        Subject
+    </label>
+
+    <input
+        type="text"
+        id="noteSubject"
+        placeholder="Enter subject name..."
+    >
+
+</div>
+
+
+
+                    <!-- NOTE CONTENT -->
+                    <div class="form-group full-width">
+
+                        <label for="noteContent">
+                            Note Content
+                        </label>
+
+                        <textarea
+                            id="noteContent"
+                            rows="6"
+                            placeholder="Write your notes here..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+                    <div class="form-actions">
+
+                        <button id="addNote">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add Note
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- NOTES SECTION -->
+            <section class="notes-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            📝 Saved Notes
+                        </h2>
+
+                        <p>
+                            Your study notes
+                        </p>
+
+                    </div>
+
+
+                    <div class="note-count">
+
+                        <span id="noteCount">
+                            0
+                        </span>
+
+                        Notes
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOTE CARDS -->
+                <div id="notesContainer" class="notes-container">
+
+                    <!-- Notes will appear here using JavaScript -->
+
+                    <div class="empty-notes">
+
+                        <div class="empty-icon">
+                            📖
+                        </div>
+
+                        <h3>
+                            No Notes Yet
+                        </h3>
+
+                        <p>
+                            Create your first study note to get started.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+     <script src="auth.js"></script>
+    <script src="notes.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - StudySphere</title>
+
+    <link rel="stylesheet" href="profile.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>StudySphere</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="todo.html">
+                <i class="fa-solid fa-square-check"></i>
+                To-Do List
+            </a>
+
+            <a href="timer.html">
+                <i class="fa-solid fa-clock"></i>
+                Study Timer
+            </a>
+
+            <a href="cgpa.html">
+                <i class="fa-solid fa-calculator"></i>
+                CGPA Calculator
+            </a>
+
+            <a href="notes.html">
+                <i class="fa-solid fa-book"></i>
+                Notes
+            </a>
+
+            <a href="exam-planner.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                Exam Planner
+            </a>
+
+            <a href="profile.html" class="active">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="profile-content">
+
+        <!-- HEADER -->
+        <header class="profile-header">
+
+            <div>
+                <h1>👤 My Profile</h1>
+                <p>Manage your personal and academic information</p>
+            </div>
+
+        </header>
+
+
+        <!-- PROFILE CARD -->
+        <section class="profile-card">
+
+            <!-- PROFILE TOP -->
+            <div class="profile-top">
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="profile-intro">
+                    <h2 id="displayName">Your Name</h2>
+                    <p id="displayCourse">B.Tech Student</p>
+                </div>
+
+            </div>
+
+
+            <!-- PERSONAL INFORMATION -->
+            <div class="section-title">
+                <h2>Personal Information</h2>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="studentName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your full name"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Enter your email"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="studentPhone"
+                        placeholder="Enter your phone number"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentRoll">
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentRoll"
+                        placeholder="Enter your roll number"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ACADEMIC INFORMATION -->
+            <div class="section-title academic-title">
+                <h2>Academic Information</h2>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="studentCourse">
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentCourse"
+                        placeholder="e.g. B.Tech"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentBranch">
+                        Branch
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentBranch"
+                        placeholder="e.g. Computer Science"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentYear">
+                        Year
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentYear"
+                        placeholder="e.g. 2nd Year"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentSemester">
+                        Semester
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentSemester"
+                        placeholder="e.g. Semester 4"
+                    >
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="studentCollege">
+                        College / University
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentCollege"
+                        placeholder="Enter your college or university"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="profile-actions">
+
+                <button id="saveProfile" class="save-btn">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    Save Changes
+                </button>
+
+                <button id="resetProfile" class="reset-btn">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Reset
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+</html>

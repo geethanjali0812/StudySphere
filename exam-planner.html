@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>StudySphere - Exam Planner</title>
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="exam-planner.css">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="exam-page">
+
+
+    <!-- ======================================
+         SIDEBAR
+    ======================================= -->
+
+    <aside class="sidebar">
+
+
+        <div class="brand">
+
+            <h2>🎓 StudySphere</h2>
+
+            <p>
+                Smart Student Learning Portal
+            </p>
+
+        </div>
+
+
+
+        <nav class="menu">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+
+
+            <a href="todo.html">
+
+                <i class="fa-solid fa-square-check"></i>
+
+                To-Do List
+
+            </a>
+
+
+
+            <a href="timer.html">
+
+                <i class="fa-solid fa-clock"></i>
+
+                Study Timer
+
+            </a>
+
+
+
+            <a href="cgpa.html">
+
+                <i class="fa-solid fa-calculator"></i>
+
+                CGPA Calculator
+
+            </a>
+
+
+
+            <a href="notes.html">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Notes
+
+            </a>
+
+
+
+            <a href="exam-planner.html"
+               class="active">
+
+                <i class="fa-solid fa-calendar"></i>
+
+                Exam Planner
+
+            </a>
+
+
+
+            <a href="profile.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                Profile
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+
+            <div class="dark-mode">
+
+                <span>
+                    ☀️ Dark Mode
+                </span>
+
+
+                <button id="darkModeBtn">
+                    🌙
+                </button>
+
+            </div>
+
+
+            <p>
+                © 2026 StudySphere
+            </p>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ======================================
+         MAIN CONTENT
+    ======================================= -->
+
+    <main class="exam-content">
+
+
+        <!-- HEADER -->
+
+        <div class="exam-header">
+
+
+            <div>
+
+                <h1>
+                    📅 Exam Planner
+                </h1>
+
+
+                <p>
+                    Plan your exams and stay prepared.
+                </p>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <input
+                    type="text"
+                    id="searchExam"
+                    placeholder="Search exams..."
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ======================================
+             ADD EXAM CARD
+        ======================================= -->
+
+        <section class="add-exam-card">
+
+
+            <h2>
+                ➕ Add New Exam
+            </h2>
+
+
+
+            <div class="exam-form">
+
+
+                <!-- EXAM NAME -->
+
+                <div class="form-group">
+
+                    <label for="examName">
+                        Exam Name
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="examName"
+                        placeholder="Example: Mid Semester Exam"
+                    >
+
+                </div>
+
+
+
+                <!-- SUBJECT -->
+
+                <div class="form-group">
+
+                    <label for="examSubject">
+                        Subject
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="examSubject"
+                        placeholder="Enter subject name..."
+                    >
+
+                </div>
+
+
+
+                <!-- DATE -->
+
+                <div class="form-group">
+
+                    <label for="examDate">
+                        Exam Date
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="examDate"
+                    >
+
+                </div>
+
+
+
+                <!-- TIME -->
+
+                <div class="form-group">
+
+                    <label for="examTime">
+                        Exam Time
+                    </label>
+
+
+                    <input
+                        type="time"
+                        id="examTime"
+                    >
+
+                </div>
+
+
+
+                <!-- VENUE -->
+
+                <div class="form-group full-width">
+
+                    <label for="examVenue">
+                        Exam Venue
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="examVenue"
+                        placeholder="Example: Block A - Room 204"
+                    >
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <div class="form-actions">
+
+
+                    <button id="addExam">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Exam
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ======================================
+             EXAM STATISTICS
+        ======================================= -->
+
+        <section class="exam-stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📚
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Exams
+                    </span>
+
+                    <strong id="totalExams">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⏳
+                </div>
+
+                <div>
+
+                    <span>
+                        Upcoming
+                    </span>
+
+                    <strong id="upcomingExams">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong id="completedExams">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ======================================
+             EXAM LIST
+        ======================================= -->
+
+        <section class="exam-list-section">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h2>
+                        📋 My Exams
+                    </h2>
+
+
+                    <p>
+                        Your examination schedule
+                    </p>
+
+                </div>
+
+
+                <button id="clearCompleted">
+
+                    Clear Completed
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- EXAMS -->
+
+            <div
+                id="examList"
+                class="exam-list"
+            >
+
+
+                <!-- EMPTY MESSAGE -->
+
+                <div class="empty-exams">
+
+
+                    <div class="empty-icon">
+                        📅
+                    </div>
+
+
+                    <h3>
+                        No Exams Added
+                    </h3>
+
+
+                    <p>
+                        Add your first exam to start planning.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- JavaScript -->
+<script src="auth.js"></script>
+<script src="exam-planner.js"></script>
+
+
+</body>
+
+</html>

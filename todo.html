@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySphere - To-Do List</title>
+
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+
+    <div class="todo-page">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h1>🎓 StudySphere</h1>
+
+            <p>Smart Student Learning Portal</p>
+
+            <nav>
+
+                <a href="dashboard.html">
+                    🏠 Dashboard
+                </a>
+
+                <a href="todo.html" class="active">
+                    ☑️ To-Do List
+                </a>
+
+                <a href="timer.html">
+                    ⏱️ Study Timer
+                </a>
+
+                <a href="cgpa.html">
+                    🧮 CGPA Calculator
+                </a>
+
+                <a href="notes.html">
+                    📚 Notes
+                </a>
+
+                <a href="exam-planner.html">
+                    📅 Exam Planner
+                </a>
+
+                <a href="profile.html">
+                    👤 Profile
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="todo-content">
+
+            <!-- HEADER -->
+            <div class="todo-header">
+
+                <h1>☑️ To-Do List</h1>
+
+                <p>
+                    Organize your academic tasks and stay productive.
+                </p>
+
+            </div>
+
+
+            <!-- ADD TASK CARD -->
+            <div class="task-card">
+
+                <h2>Add New Task</h2>
+
+                <div class="task-input-row">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Enter your task..."
+                    >
+
+                    <input
+                        type="date"
+                        id="taskDate"
+                    >
+
+                    <select id="taskPriority">
+
+                        <option value="">
+                            Priority
+                        </option>
+
+                        <option value="High">
+                            🔴 High
+                        </option>
+
+                        <option value="Medium">
+                            🟡 Medium
+                        </option>
+
+                        <option value="Low">
+                            🟢 Low
+                        </option>
+
+                    </select>
+
+                    <button id="addTask">
+                        ➕ Add Task
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TASK STATISTICS -->
+            <div class="task-stats">
+
+                <div class="stat-card">
+
+                    <h3>Total Tasks</h3>
+
+                    <span id="totalTasks">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Completed</h3>
+
+                    <span id="completedTasks">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Pending</h3>
+
+                    <span id="pendingTasks">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TASK LIST -->
+            <div class="task-list-card">
+
+                <div class="task-list-header">
+
+                    <h2>My Tasks</h2>
+
+                    <button id="clearCompleted">
+                        Clear Completed
+                    </button>
+
+                </div>
+
+
+                <div id="taskList">
+
+                    <!-- Tasks will appear here using JavaScript -->
+
+                    <div class="empty-task">
+
+                        <div class="empty-icon">
+                            📝
+                        </div>
+
+                        <h3>No Tasks Yet</h3>
+
+                        <p>
+                            Add your first task to get started.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+     <script src="auth.js"></script>
+    <script src="streak.js"></script>
+    <script src="todo.js"></script>
+
+</body>
+
+</html>

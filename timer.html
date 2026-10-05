@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySphere - Study Timer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="timer-page">
+
+        <h1>⏱️ Study Timer</h1>
+        <p>Stay focused and achieve your goals!</p>
+
+        <div class="timer-container">
+
+            <h2 id="timerDisplay">25:00</h2>
+
+            <p id="timerStatus">Ready to focus? 🚀</p>
+
+            <div class="timer-buttons">
+
+                <button id="startTimer">▶ Start</button>
+
+                <button id="pauseTimer">⏸ Pause</button>
+
+                <button id="resetTimer">🔄 Reset</button>
+
+            </div>
+
+            <div class="session-info">
+
+                🍅 Pomodoro Sessions:
+                <span id="sessionCount">0</span>
+
+            </div>
+
+        </div>
+
+        <a href="dashboard.html" class="back-dashboard">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+    <script src="auth.js"></script>
+    <script src="streak.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

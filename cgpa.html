@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySphere - CGPA Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cgpa-page">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h1>🎓 StudySphere</h1>
+            <p>Smart Student Learning Portal</p>
+
+            <nav>
+                <a href="dashboard.html">🏠 Dashboard</a>
+                <a href="todo.html">☑️ To-Do List</a>
+                <a href="timer.html">⏱️ Study Timer</a>
+                <a href="cgpa.html" class="active">🧮 CGPA Calculator</a>
+                <a href="notes.html">📚 Notes</a>
+                <a href="exam-planner.html">📅 Exam Planner</a>
+                <a href="profile.html">👤 Profile</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="cgpa-content">
+
+            <div class="cgpa-header">
+                <h1>🎓 CGPA Calculator</h1>
+                <p>Calculate your academic performance easily.</p>
+            </div>
+
+
+            <!-- Calculator Card -->
+            <div class="calculator-card">
+
+                <h2>Enter Your Subject Details</h2>
+
+
+                <div class="subject-row">
+
+                    <input type="text"
+                           id="subjectName"
+                           placeholder="Subject Name">
+
+                    <input type="number"
+                           id="subjectCredits"
+                           placeholder="Credits"
+                           min="1">
+
+                    <select id="subjectGrade">
+
+                        <option value="">Select Grade</option>
+
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="5">C</option>
+                        <option value="0">F</option>
+
+                    </select>
+
+                    <button id="addSubject">Add Subject</button>
+
+                </div>
+
+
+                <!-- Subject List -->
+                <div id="subjectList"></div>
+
+
+                <div class="cgpa-buttons">
+
+                    <button id="calculateCGPA">
+                        Calculate CGPA
+                    </button>
+
+                    <button id="resetCGPA">
+                        Reset
+                    </button>
+
+                </div>
+
+
+                <!-- Result -->
+                <div class="cgpa-result">
+
+                    <h2>Your CGPA</h2>
+
+                    <div id="cgpaResult">
+                        0.00
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

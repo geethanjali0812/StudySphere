@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudySphere - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <h2>🎓 StudySphere</h2>
+                <p>Smart Student Learning Portal</p>
+            </div>
+
+            <nav class="menu">
+
+                <a href="dashboard.html" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+
+                <a href="todo.html">
+                    <i class="fa-solid fa-square-check"></i>
+                    To-Do List
+                </a>
+
+                <a href="timer.html">
+                    <i class="fa-solid fa-clock"></i>
+                    Study Timer
+                </a>
+
+                <a href="cgpa.html">
+                    <i class="fa-solid fa-calculator"></i>
+                    CGPA Calculator
+                </a>
+
+                <a href="notes.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Notes
+                </a>
+
+                <a href="exam-planner.html">
+    <i class="fa-solid fa-calendar"></i>
+    Exam Planner
+</a>
+
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="dark-mode">
+                    <span>☀️ Dark Mode</span>
+                    <button type="button" id="darkModeBtn">
+        🌙
+    </button>
+                </div>
+                <button type="button" id="logoutBtn" class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </button>
+
+
+                <p>© 2026 StudySphere</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <div class="topbar">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <div class="user-section">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="user-icon">👤</span>
+                    <span>Student</span>
+                </div>
+
+            </div>
+
+
+            <!-- WELCOME SECTION -->
+            <section class="welcome">
+
+                <div>
+                    <h1>Hello, Student! 👋</h1>
+                    <p>Keep going! Your goals are within reach.</p>
+                </div>
+
+                <div class="quote">
+                    <p>"Small steps every day lead to big results."</p>
+                    <span>— StudySphere</span>
+                </div>
+
+            </section>
+
+
+            <!-- FEATURE CARDS -->
+            <section class="cards">
+
+                <div class="dashboard-card todo-card">
+
+                    <div class="card-icon">✅</div>
+
+                    <h2>To-Do List</h2>
+
+                    <p>Manage your daily tasks and stay productive.</p>
+
+                    <a href="todo.html" class="dashboard-btn todo-btn">
+    View Tasks →
+</a>
+
+                </div>
+
+
+                <div class="dashboard-card timer-card">
+
+                    <div class="card-icon">⏱️</div>
+
+                    <h2>Study Timer</h2>
+
+                    <p>Use the Pomodoro technique to stay focused.</p>
+
+                    <a href="timer.html" class="dashboard-btn timer-btn">
+    Start Timer →
+</a>
+
+                </div>
+
+
+                <div class="dashboard-card cgpa-card">
+
+                    <div class="card-icon">🎓</div>
+
+                    <h2>CGPA Calculator</h2>
+
+                    <p>Calculate and track your academic performance.</p>
+
+                    <a href="cgpa.html" class="dashboard-btn cgpa-btn">
+                        Calculate →
+                    </a>
+
+                </div>
+
+
+                <div class="dashboard-card streak-card">
+
+                    <div class="card-icon">🔥</div>
+
+                    <h2>Study Streak</h2>
+
+                    <p>Keep your momentum and build good habits.</p>
+
+                    <h3 id="streakDisplay">🔥 0 Days</h3>
+
+                    <span>Start you
+                        r streak today!</span>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOTTOM SECTION -->
+            <section class="bottom-section">
+
+                <!-- STUDY PROGRESS -->
+                <div class="progress-box">
+
+                    <h2>📊 Study Progress</h2>
+
+                    <p>Your learning journey at a glance</p>
+
+                    <div class="progress-bars">
+
+                        <div class="bar-item">
+    <span>Tasks</span>
+
+    <div class="bar">
+        <div class="fill tasks-fill" id="tasksProgressFill"></div>
+    </div>
+
+    <small id="tasksProgressText">0%</small>
+</div>
+                        <div class="bar-item">
+    <span>Timer</span>
+
+    <div class="bar">
+        <div class="fill timer-fill" id="timerProgressFill"></div>
+    </div>
+
+    <small id="timerProgressText">0%</small>
+</div>
+
+                        <div class="bar-item">
+    <span>CGPA</span>
+
+    <div class="bar">
+        <div class="fill cgpa-fill" id="cgpaProgressFill"></div>
+    </div>
+
+    <small id="cgpaProgressText">0%</small>
+</div>
+
+                        <div class="bar-item">
+    <span>Notes</span>
+
+    <div class="bar">
+        <div class="fill notes-fill" id="notesProgressFill"></div>
+    </div>
+
+    <small id="notesProgressText">0%</small>
+</div>
+                    </div>
+
+                </div>
+
+
+            
+
+
+</div>
+            </section>
+
+        </main>
+
+    </div>
+    <script src="auth.js"></script>
+    <script src="streak.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

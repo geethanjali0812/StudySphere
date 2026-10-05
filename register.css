@@ -1,0 +1,320 @@
+/* ======================================
+   STUDYSPHERE - REGISTRATION PAGE
+   ====================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: #eef4ff;
+}
+
+
+/* ======================================
+   MAIN CONTAINER
+   ====================================== */
+
+.register-container {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* ======================================
+   LEFT SIDE
+   ====================================== */
+
+.register-left {
+    width: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color: white;
+
+    padding: 60px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* BRAND */
+
+.brand h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.brand p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+
+/* WELCOME TEXT */
+
+.welcome-text {
+    max-width: 480px;
+
+    margin-top: 100px;
+}
+
+.welcome-text h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+
+/* ======================================
+   RIGHT SIDE
+   ====================================== */
+
+.register-right {
+    width: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* ======================================
+   REGISTER BOX
+   ====================================== */
+
+.register-box {
+    width: 100%;
+    max-width: 430px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.register-box h2 {
+    color: #1e3a8a;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+/* ======================================
+   INPUT GROUP
+   ====================================== */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* ======================================
+   INPUT BOX
+   ====================================== */
+
+.input-box {
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 10px;
+
+    padding: 0 13px;
+
+    height: 48px;
+
+    transition: 0.2s;
+}
+
+.input-box:focus-within {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-box i {
+    color: #64748b;
+
+    margin-right: 10px;
+}
+
+.input-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 14px;
+
+    color: #334155;
+}
+
+.input-box input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* ======================================
+   REGISTER BUTTON
+   ====================================== */
+
+.register-btn {
+    width: 100%;
+
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-top: 8px;
+
+    transition: 0.2s;
+}
+
+.register-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* ======================================
+   MESSAGE
+   ====================================== */
+
+#registerMessage {
+    text-align: center;
+
+    font-size: 14px;
+
+    margin-top: 15px;
+
+    min-height: 20px;
+}
+
+
+/* ======================================
+   LOGIN LINK
+   ====================================== */
+
+.login-link {
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* ======================================
+   MOBILE RESPONSIVE
+   ====================================== */
+
+@media (max-width: 800px) {
+
+    .register-container {
+        flex-direction: column;
+    }
+
+    .register-left {
+        width: 100%;
+
+        padding: 40px 25px;
+
+        min-height: 300px;
+    }
+
+    .welcome-text {
+        margin-top: 50px;
+    }
+
+    .welcome-text h2 {
+        font-size: 28px;
+    }
+
+    .register-right {
+        width: 100%;
+
+        padding: 25px;
+    }
+
+    .register-box {
+        padding: 30px 25px;
+    }
+}

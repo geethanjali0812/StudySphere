@@ -1,0 +1,401 @@
+/* ================================
+   PROFILE PAGE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    background: #0f172a;
+    color: white;
+
+    padding: 25px 15px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+
+.brand i {
+    color: #60a5fa;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 13px 15px;
+
+    color: #cbd5e1;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    background: #1e293b;
+    color: white;
+}
+
+.menu a.active {
+    background: #2563eb;
+    color: white;
+}
+
+.menu a i {
+    width: 20px;
+    text-align: center;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.profile-content {
+    margin-left: 240px;
+    padding: 35px 45px;
+
+    min-height: 100vh;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.profile-header {
+    margin-bottom: 30px;
+}
+
+.profile-header h1 {
+    font-size: 30px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.profile-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+
+/* ================================
+   PROFILE CARD
+================================ */
+
+.profile-card {
+    max-width: 950px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ================================
+   PROFILE TOP
+================================ */
+
+.profile-top {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    margin-bottom: 30px;
+}
+
+.profile-avatar {
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+    color: #2563eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+}
+
+.profile-intro h2 {
+    font-size: 24px;
+    color: #0f172a;
+
+    margin-bottom: 6px;
+}
+
+.profile-intro p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+
+/* ================================
+   SECTION TITLE
+================================ */
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 19px;
+    color: #0f172a;
+}
+
+.academic-title {
+    margin-top: 35px;
+}
+
+
+/* ================================
+   FORM GRID
+================================ */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #334155;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.profile-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+.profile-actions button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: 0.2s;
+}
+
+.save-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+.reset-btn {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.reset-btn:hover {
+    background: #cbd5e1;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .profile-content {
+        margin-left: 210px;
+        padding: 30px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        padding: 15px;
+    }
+
+    .brand {
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        gap: 5px;
+    }
+
+    .menu a {
+        padding: 10px;
+    }
+
+    .profile-content {
+        margin-left: 0;
+
+        padding: 25px 18px;
+    }
+
+    .profile-header h1 {
+        font-size: 25px;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-top {
+        align-items: flex-start;
+    }
+
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .profile-intro h2 {
+        font-size: 20px;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+    }
+
+    .profile-actions button {
+        justify-content: center;
+    }
+
+}
